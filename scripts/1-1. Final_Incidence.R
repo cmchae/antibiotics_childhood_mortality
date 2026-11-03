@@ -489,6 +489,8 @@ df.exploring <- df.pca.ready %>%
     by = c("Country", "Year")
   )
 
+dir.create("figures/supplementary", recursive = TRUE, showWarnings = FALSE)
+
 pdf("figures/supplementary/Distribution of UNHNP by year.pdf", width = 12, height = 8)
 
 par(mfrow = c(6, 4))
