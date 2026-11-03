@@ -28,20 +28,12 @@ inc_rate_fev_Age_2to4      <- readRDS("outputs/pipelines/bacterial_incidence/inc
 
 
 #endemic without latitude
-AA_LRTI_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_0_11_months_enet_050_uncertainty.rds")$projection_draw_matrix[row,]
-AA_LRTI_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_12_23_months_enet_050_uncertainty.rds")$projection_draw_matrix[row,]
-AA_LRTI_Age_2to4  <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_24_59_months_enet_050_uncertainty.rds")$projection_draw_matrix[row,]
+AA_LRTI_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_0_11_months_enet_025_uncertainty.rds")$projection_draw_matrix[row,]
+AA_LRTI_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_12_23_months_enet_025_uncertainty.rds")$projection_draw_matrix[row,]
+AA_LRTI_Age_2to4  <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_24_59_months_enet_025_uncertainty.rds")$projection_draw_matrix[row,]
 AA_fev_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/fever_0_11_months_gam_uncertainty.rds")$projection_draw_matrix[row,]
 AA_fev_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/fever_12_23_months_gam_uncertainty.rds")$projection_draw_matrix[row,]
 AA_fev_Age_2to4  <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/fever_24_59_months_gam_uncertainty.rds")$projection_draw_matrix[row,]
-
-# latitude without endemic
-# AA_LRTI_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/LRTI_0_11_months_GAM_uncertainty.rds")$projection_draw_matrix
-# AA_LRTI_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/LRTI_12_23_months_GAM_uncertainty.rds")$projection_draw_matrix
-# AA_LRTI_Age_2to4  <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/LRTI_24_59_months_GAM_uncertainty.rds")$projection_draw_matrix
-# AA_fev_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/fever_0_11_months_GAM_uncertainty.rds")$projection_draw_matrix
-# AA_fev_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/fever_12_23_months_GAM_uncertainty.rds")$projection_draw_matrix
-# AA_fev_Age_2to4  <- readRDS("outputs/pipelines/AA_age_specific_GAM_uncertainty/fever_24_59_months_GAM_uncertainty.rds")$projection_draw_matrix
 
 
 death_rate_list <- list(death_rate_lrti_Age_0, death_rate_lrti_Age_1, death_rate_lrti_Age_2to4, death_rate_fev_Age_0, death_rate_fev_Age_1, death_rate_fev_Age_2to4)
@@ -150,8 +142,8 @@ abline(lm(median ~ log10(GDP), data = Ab_fev_prop_summary %>% filter(Year == plo
 
 ## data -----------------------------------------
 
-load("outputs/pipelines/parsFevSx.Rdata")
-load("outputs/pipelines/parsRespSx.Rdata" )
+load("data/abx_effect/parsFevSx.Rdata")
+load("data/abx_effect/parsRespSx.Rdata" )
 
 parsFevSx_order_i <- order(parsFevSx)
 draw_position_i <- round(seq(from = 1, to = length(parsFevSx), length.out = 1000))

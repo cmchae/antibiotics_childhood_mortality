@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Primary data (kept locally, not uploaded)
+/data/
+
+# Generated intermediate data and results
+/outputs/
