@@ -26,7 +26,6 @@ inc_rate_fev_Age_0         <- readRDS("outputs/pipelines/bacterial_incidence/inc
 inc_rate_fev_Age_1         <- readRDS("outputs/pipelines/bacterial_incidence/inc_bact_fever_12_23_matrix.rds")[row,]
 inc_rate_fev_Age_2to4      <- readRDS("outputs/pipelines/bacterial_incidence/inc_bact_fever_24_59_matrix.rds")[row,]
 
-
 #endemic without latitude
 AA_LRTI_Age_0     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_0_11_months_enet_025_uncertainty.rds")$projection_draw_matrix[row,]
 AA_LRTI_Age_1     <- readRDS("outputs/pipelines/AA_age_specific_selected_model_uncertainty/LRTI_12_23_months_enet_025_uncertainty.rds")$projection_draw_matrix[row,]

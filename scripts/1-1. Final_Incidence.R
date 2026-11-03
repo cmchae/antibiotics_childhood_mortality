@@ -6,6 +6,22 @@
 rm(list = ls())
 gc()
 
+# generating the folders for reproducibility.
+output_dirs <- c(
+  "outputs/pipelines",
+  "outputs/pipelines/suppl_table",
+  "outputs/supplementary",
+  "outputs/sub_results",
+  "outputs/tables"
+)
+
+invisible(lapply(
+  output_dirs,
+  dir.create,
+  recursive = TRUE,
+  showWarnings = FALSE
+))
+
 requiredPackages <- c("data.table", "dplyr", "tidyr", "tibble", "missMDA", "FactoMineR", "naniar")
 lib.path <- .libPaths()
 

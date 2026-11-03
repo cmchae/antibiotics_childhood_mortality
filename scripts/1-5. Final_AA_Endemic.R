@@ -26,7 +26,6 @@ local_files <- list.files(datasets_dir, pattern = "\\.rds$", full.names = TRUE)
 keep_variables <- c(
   "caseid", "v000", "v001", "v005", "v006", "v007", "v008", 
   "v024", "v025",
-  "bidx", "b3", "b4", "b5", "b7", "b8", 
   "h22", "h31", "h31b", "h31c",
   "v106", "v190",
   "v113", "v116", "v119", "v161",

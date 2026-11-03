@@ -415,7 +415,7 @@ AA_result_fever_summary <-
             AA_result_fever_q4_summary,
             AA_result_fever_q5_summary)
 
-write.csv(AA_result_LRTI_summary, "outputs/pipelines/suppl_table/quintile_AA_LRTI.csv")
+write.csv(AA_result_LRTI_summary, "outputs/pipelines/suppl_table/quintile_AA_lrti.csv")
 write.csv(AA_result_fever_summary, "outputs/pipelines/suppl_table/quintile_AA_fever.csv")
 
 UNI <- readRDS("outputs/pipelines/pc_gdp_2023_incidence.rds")

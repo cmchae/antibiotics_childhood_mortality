@@ -311,8 +311,8 @@ dev.off()
 
 ## data -----------------------------------------
 
-load("outputs/pipelines/parsFevSx.Rdata")
-load("outputs/pipelines/parsRespSx.Rdata" )
+load("data/abx_effect/parsFevSx.Rdata")
+load("data/abx_effect/parsRespSx.Rdata" )
 
 parsFevSx_order_i <- order(parsFevSx)
 draw_position_i <- round(seq(from = 1, to = length(parsFevSx), length.out = 1000))
@@ -433,7 +433,7 @@ effect_x_ticks <- seq(0,1, length.out = 5)
 effect_xlim <- c(0,1)
 effect_x_labels <- sprintf("%.2f", effect_x_ticks)
 
-effect_dat_plot <- read.csv("outputs/pipelines/figure_1_data.csv",  fileEncoding = "macintosh",  stringsAsFactors = FALSE)
+effect_dat_plot <- read.csv("data/abx_effect/figure_1_data.csv",  fileEncoding = "macintosh",  stringsAsFactors = FALSE)
 effect_dat_plot <- effect_dat_plot %>% dplyr::select(-X)
 effect_AF_x_ticks <- pretty(c(0,0.5), n = 5)
 effect_AF_xlim <- c(0,0.3)

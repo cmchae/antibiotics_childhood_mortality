@@ -229,8 +229,8 @@ q1_AA_rate_fever <- wealth_under5_results$q1$AA_rate_fever
 
 
 ## 2. antibiotic effectiveness --------------------
-load("outputs/pipelines/parsFevSx.Rdata")
-load("outputs/pipelines/parsRespSx.Rdata" )
+load("data/abx_effect/parsFevSx.Rdata")
+load("data/abx_effect/parsRespSx.Rdata" )
 
 parsFevSx_order_i <- order(parsFevSx)
 draw_position_i <- round(seq(from = 1, to = length(parsFevSx), length.out = 1000))
