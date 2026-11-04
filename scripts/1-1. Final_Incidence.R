@@ -2181,6 +2181,8 @@ missing_table_pdf <- missing_table %>%
     pct_missing = sprintf("%.2f", pct_missing)
   )
 
+dir.create("figures/main_analysis/inc_model_diagnostics", recursive = TRUE, showWarnings = FALSE)
+
 pdf(
   "figures/main_analysis/inc_model_diagnostics/missingness_table.pdf",
   width = 12,
